@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as GovernmentAerospaceRouteImport } from './routes/government-aerospace'
 import { Route as IndexRouteImport } from './routes/index'
 
+const GovernmentAerospaceRoute = GovernmentAerospaceRouteImport.update({
+  id: '/government-aerospace',
+  path: '/government-aerospace',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +25,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/government-aerospace': typeof GovernmentAerospaceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/government-aerospace': typeof GovernmentAerospaceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/government-aerospace': typeof GovernmentAerospaceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/government-aerospace'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/government-aerospace'
+  id: '__root__' | '/' | '/government-aerospace'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GovernmentAerospaceRoute: typeof GovernmentAerospaceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/government-aerospace': {
+      id: '/government-aerospace'
+      path: '/government-aerospace'
+      fullPath: '/government-aerospace'
+      preLoaderRoute: typeof GovernmentAerospaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GovernmentAerospaceRoute: GovernmentAerospaceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

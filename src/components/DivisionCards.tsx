@@ -24,11 +24,14 @@ export function DivisionCards() {
                   Novagentec<br />Commercial<br />Small Business
                 </h2>
                 <p className="font-mono text-[9px] md:text-[10px] tracking-[0.15em] text-graphite mb-6 uppercase border-b border-stone-gray/30 pb-4 inline-block">
-                  Business Growth Infrastructure
+                  Operational Infrastructure
                 </p>
                 <p className="text-graphite font-light leading-relaxed text-xs md:text-sm max-w-[280px]">
-                  Growth architecture for local service businesses. Align your brand, systems, operations, and customer experience into one scalable infrastructure.
+                  Process engineering for owner-led businesses. We turn hard-won expertise into
+                  documented workflows, repeatable operations, and a scalable foundation built to
+                  hold growth.
                 </p>
+
               </div>
 
               <div className="mt-10">

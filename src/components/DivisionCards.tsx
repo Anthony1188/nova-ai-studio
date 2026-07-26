@@ -24,11 +24,14 @@ export function DivisionCards() {
                   Novagentec<br />Commercial<br />Small Business
                 </h2>
                 <p className="font-mono text-[9px] md:text-[10px] tracking-[0.15em] text-graphite mb-6 uppercase border-b border-stone-gray/30 pb-4 inline-block">
-                  Business Growth Infrastructure
+                  Operational Infrastructure
                 </p>
                 <p className="text-graphite font-light leading-relaxed text-xs md:text-sm max-w-[280px]">
-                  Growth architecture for local service businesses. Align your brand, systems, operations, and customer experience into one scalable infrastructure.
+                  Process engineering for owner-led businesses. We turn hard-won expertise into
+                  documented workflows, repeatable operations, and a scalable foundation built to
+                  hold growth.
                 </p>
+
               </div>
 
               <div className="mt-10">
@@ -75,11 +78,13 @@ export function DivisionCards() {
                   Novagentec<br />Government<br />& Aerospace
                 </h2>
                 <p className="font-mono text-[9px] md:text-[10px] tracking-[0.15em] text-technical-bronze mb-6 uppercase border-b border-technical-bronze/30 pb-4 inline-block">
-                  Contract and Technical Infrastructure
+                  Technical Business Systems
                 </p>
                 <p className="text-stone-gray font-light leading-relaxed text-xs md:text-sm max-w-[280px]">
-                  Mission-ready infrastructure for government contractors and aerospace suppliers. Build compliance, execution, and operational excellence into every program.
+                  Operational infrastructure for government contractors and aerospace suppliers.
+                  Compliance, execution, and performance engineered into repeatable programs.
                 </p>
+
               </div>
 
               <div className="mt-10">
